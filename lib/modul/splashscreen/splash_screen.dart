@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
           sizeCurve: Curves.easeInCirc,
           duration: const Duration(seconds: 1),
           firstChild: const Text(
-            "Welcome App Kelompok 5",
+            "Welcome",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 16,

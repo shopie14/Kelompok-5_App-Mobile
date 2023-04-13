@@ -18,13 +18,8 @@ class HeaderWidget extends StatelessWidget {
           style: const TextStyle(
             fontWeight: FontWeight.bold,
           )),
-      trailing: GestureDetector(
-        onTap: (){
-
-        },
-        child: CircleAvatar(
-          foregroundImage: NetworkImage(widget.user.profileImage!),
-        ),
+      trailing: CircleAvatar(
+        foregroundImage: NetworkImage(widget.user.profileImage!),
       ),
     );
   }
