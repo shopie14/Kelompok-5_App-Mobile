@@ -21,7 +21,7 @@ class AppRoutes {
       key: state.pageKey,
       child: const SplashScreen(),
     );
-  }
+  } //david
 
   static Page _homeScreenRouteBuilder(
     BuildContext context,
