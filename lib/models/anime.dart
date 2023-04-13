@@ -6,3 +6,4 @@ class News {
 
   News({this.id, this.title, this.description, this.image});
 }
+/// shopi nurhidayanti
