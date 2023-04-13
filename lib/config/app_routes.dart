@@ -72,25 +72,25 @@ class AppRoutes {
     }
   }
 
-  static Page _profileRouteBuilder(
-    BuildContext context, 
-    GoRouterState state,
-  ){
-    late User user; 
-    if(state.extra != null && state.extra is User){
-      user = state.extra as User; 
-    }else{
-      user = User(
-        id: 005, 
-        name: "No Name", 
-        userName: "No Name", 
-        email: "nim@itg.ac.id", 
-        profileImage: "", 
-        phoneNumber: "08122222222", 
-      );
-    }
-    return MaterialPage(child: ProfileScreen(user:user));
-  }
+  // static Page _profileRouteBuilder(
+  //   BuildContext context, 
+  //   GoRouterState state,
+  // ){
+  //   late User user; 
+  //   if(state.extra != null && state.extra is User){
+  //     user = state.extra as User; 
+  //   }else{
+  //     user = User(
+  //       id: 005, 
+  //       name: "No Name", 
+  //       userName: "No Name", 
+  //       email: "nim@itg.ac.id", 
+  //       profileImage: "", 
+  //       phoneNumber: "08122222222", 
+  //     );
+  //   }
+  //   return MaterialPage(child: ProfileScreen(user:user));
+  // }
 
   static final GoRouter goRouter = GoRouter(
     routerNeglect: true,
@@ -110,11 +110,11 @@ class AppRoutes {
         path: "/news-detail/:id",
         pageBuilder: _newDetailRouteBuilder,
       ),
-      GoRoute(
-        name: profile,
-        path: "/profile",
-        pageBuilder: _profileRouteBuilder,
-      ),
+      // GoRoute(
+      //   name: profile,
+      //   path: "/profile",
+      //   pageBuilder: _profileRouteBuilder,
+      // ),
     ],
     initialLocation: "/splash",
   );
