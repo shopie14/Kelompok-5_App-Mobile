@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pertemuan_v/config/app_routes.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+    ),
+  );
   runApp(const MainApp());
 }
 
@@ -16,7 +23,7 @@ class MainApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.white,
       ),
-      title: "Apps Pertemuan 5",
+      title: "News Apps",
       routeInformationProvider: AppRoutes.goRouter.routeInformationProvider,
       routerDelegate: AppRoutes.goRouter.routerDelegate,
       routeInformationParser: AppRoutes.goRouter.routeInformationParser,
