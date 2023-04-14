@@ -71,7 +71,11 @@ class AppRoutes {
     }
   }
 
+<<<<<<< HEAD
    static Page _profileRouteBuilder(
+=======
+  static Page _profileRouteBuilder(
+>>>>>>> 7408c7d4ff30f5a4b6186348e490c520802afef6
     BuildContext context,
     GoRouterState state,
   ) {
@@ -91,7 +95,11 @@ class AppRoutes {
     }
     return MaterialPage(child: ProfileScreen(user: user));
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 7408c7d4ff30f5a4b6186348e490c520802afef6
   static final GoRouter goRouter = GoRouter(
     routerNeglect: true,
     routes: [
