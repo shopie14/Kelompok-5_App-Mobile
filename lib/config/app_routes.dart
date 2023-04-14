@@ -5,6 +5,7 @@ import 'package:pertemuan_v/modul/anime_detail/anime_detail_screen.dart';
 import 'package:pertemuan_v/modul/home/home_screen.dart';
 
 import '../models/user.dart';
+import '../modul/profile/profile_screen.dart';
 import '../modul/splashscreen/splash_screen.dart';
 
 class AppRoutes {
@@ -70,6 +71,27 @@ class AppRoutes {
     }
   }
 
+   static Page _profileRouteBuilder(
+    BuildContext context,
+    GoRouterState state,
+  ) {
+    late User user;
+    if (state.extra != null && state.extra is User) {
+      user = state.extra as User;
+    } else {
+      user = User(
+        id: 000,
+        name: "No name",
+        userName: "no name",
+        email: "email@example.com",
+        profileImage:
+            "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+        phoneNumber: "+123456789",
+      );
+    }
+    return MaterialPage(child: ProfileScreen(user: user));
+  }
+  
   static final GoRouter goRouter = GoRouter(
     routerNeglect: true,
     routes: [
@@ -87,6 +109,11 @@ class AppRoutes {
         name: newDetail,
         path: "/news-detail/:id",
         pageBuilder: _newDetailRouteBuilder,
+      ),
+      GoRoute(
+        name: profile,
+        path: "/profile",
+        pageBuilder: _profileRouteBuilder,
       ),
     ],
     initialLocation: "/splash",
