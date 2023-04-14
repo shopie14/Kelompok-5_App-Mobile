@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:news_apps/modul/profil/profil_screen.dart';
-import '/models/news.dart';
+import '../models/anime.dart';
+import '../modul/anime_detail/anime_detail_screen.dart';
+import '../modul/profile/profile_screen.dart';
 import '/modul/home/home_screen.dart';
 // import 'package:navigator_apps/modul/news_detail/new_detail_screen.dart';
 
 import '../models/user.dart';
-import '../modul/news_detail/news_detail_screen.dart';
 import '../modul/splashscreen/splash_screen.dart';
 
 class AppRoutes {
