@@ -27,21 +27,58 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: IndexedStack(
-        index: _tabIndex,
-        children: [
-          ListView(
-            children: [
-              HeaderWidget(widget: widget),
-              const SearchbarWidget(),
-              const HotNewsWidget(),
-              const LatesNewsWidget()
-            ],
-          ),
-          const NewsScreen(),
-          const MenuScreen(),
-        ],
+      endDrawer: Drawer(
+        width: size.width * 0.7,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+                padding: const EdgeInsets.symmetric(vertical: 40),
+                decoration: BoxDecoration(color: Colors.grey[400]),
+                child: Column(
+                  children: [
+                    CircleAvatar(
+                      radius: 60,
+                      foregroundImage: NetworkImage(widget.user.profileImage!),
+                    ),
+                    Text(widget.user.name,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                        )),
+                    Text(widget.user.email),
+                  ],
+                )),
+            Card(
+              child: ListTile(
+                onTap: () {},
+                leading: const Icon(Icons.person),
+                title: const Text("Profile"),
+              ),
+            )
+          ],
+        ),
+      ),
+      body: SafeArea(
+        child: IndexedStack(
+          index: _tabIndex,
+          children: [
+            SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  HeaderWidget(data: widget.user),
+                  const SearchbarWidget(),
+                  const HotNewsWidget(),
+                  const LatesNewsWidget()
+                ],
+              ),
+            ),
+            const NewsScreen(),
+            const MenuScreen(),
+          ],
+        ),
       ),
       bottomNavigationBar: bottomNavigation(),
     );
@@ -57,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
           icon: Icon(Icons.home),
         ),
         BottomNavigationBarItem(
-          label: "Anime List",
+          label: "News",
           icon: Icon(Icons.newspaper),
         ),
         BottomNavigationBarItem(

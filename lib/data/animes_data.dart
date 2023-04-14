@@ -45,5 +45,19 @@ List<News> hotNews = [
         "Mahiru Shiina is worthy of her nickname Angel: she is a divine beauty loved by all, and she excels in both academics and athletics. Shiina lives in an entirely different world from Amane Fujimiya, her next-door neighbor. Despite living so close together, they have never spoken once. But their silence is broken when Fujimiya spots Shiina gloomily sitting on a swing amidst a heavy rainstorm and lends her his umbrella. When Fujimiya catches a cold the next day, Shiina wishes to return the favor for the umbrella by nursing him back to health. Believing that this would be their first and last interaction, he silently appreciates her kindness. However, Shiina—who can not help but worry about Fujimiya's lack of tidiness and proper nutrition—begins to cook and clean for him. As the unlikely pair spend time together in Fujimiya's apartment, they explore the true nature of their relationship and the gentle emotions that emerge from it",
     image: "https://cdn.myanimelist.net/images/anime/1847/134795.jpg",
   ),
+  News(
+    id: 4,
+    title: "Ayakashi Triangle",
+    description:
+        "Ayakashi are strange, supernatural creatures invisible to the majority of people. Though most are harmless, some ayakashi attack humans to devour their life force. Exorcist ninjas are tasked with protecting people from these spiteful spirits. Matsuri Kazamaki is a young exorcist ninja born to a prestigious clan. His childhood friend, Suzu Kanade, is an ayakashi medium—an individual with immense vitality that attracts ayakashi. Matsuri deems all ayakashi threatening and wishes to keep Suzu as far from them as possible, but this clashes with her desire to remain close to them. One day, the pair encounters Shirogane, the King of Ayakashi, who is hellbent on consuming Suzu.\nAs she is about to be eaten, Matsuri comes to the rescue and manages to seal the ayakashi's powers—but not before Shirogane takes revenge by turning him into a girl! Until he finds a way to transform back, Matsuri must adjust to his new, peculiar lifestyle while fighting against hostile ayakashi. Moreover, Suzu is now conflicted about her feelings toward Matsuri—further plunging their relationship into a state of ambiguity.",
+    image: "https://cdn.myanimelist.net/images/anime/1078/131921.jpg",
+  ),
+  News(
+    id: 1,
+    title: "Vinland Saga Season 2",
+    description:
+        "After his father's death and the destruction of his village at the hands of English raiders, Einar wishes for a peaceful life with his family on their newly rebuilt farms. However, fate has other plans: his village is invaded once again. Einar watches helplessly as the marauding Danes burn his lands and slaughter his family.\nThe invaders capture Einar and take him back to Denmark as a slave. Einar clings to his mother's final words to survive. He is purchased by Ketil, a kind slave owner and landlord who promises that Einar can regain his freedom in return for working in the fields.\nSoon, Einar encounters his new partner in farm cultivation—Thorfinn, a dejected and melancholic slave. As Einar and Thorfinn work together toward their freedom, they are haunted by both sins of the past and the ploys of the present. Yet they carry on, grasping for a glimmer of hope, redemption, and peace in a world that is nothing but unjust and unforgiving.",
+    image: "https://cdn.myanimelist.net/images/anime/1170/124312.jpg",
+  ),
 ];
 

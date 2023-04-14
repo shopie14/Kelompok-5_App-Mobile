@@ -7,59 +7,48 @@ class MenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Menu'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            ElevatedButton.icon(
-              onPressed: () {
-                // aksi yang ingin dilakukan saat tombol "Home" ditekan
-              },
-              icon: Icon(Icons.home),
-              label: const Text('Home'),
-            ),
-            const SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: () {
-                // aksi yang ingin dilakukan saat tombol "Anime List" ditekan
-              },
-              icon: Icon(Icons.list),
-              label: const Text('Anime List'),
-            ),
-            const SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: () {
-                // aksi yang ingin dilakukan saat tombol "Setting" ditekan
-              },
-              icon: Icon(Icons.settings),
-              label: const Text('Setting'),
-            ),
-            const SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: () {
-                // aksi yang ingin dilakukan saat tombol "Profile" ditekan
-              },
-              icon: Icon(Icons.person),
-              label: const Text('Profile'),
-            ),
-            const SizedBox(height: 16),
-            ElevatedButton.icon(
-              onPressed: () {
-                // aksi yang ingin dilakukan saat tombol "Logout" ditekan
-              },
-              icon: Icon(Icons.logout),
-              label: const Text('Logout'),
-            ),
-          ],
+    return ListView(
+      physics: const BouncingScrollPhysics(),
+      children: [
+        const DrawerHeader(
+          child: Text("Menu Option",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              )),
         ),
-      ),
+        Card(
+          child: ListTile(
+            onTap: () {},
+            leading: const Icon(Icons.person),
+            title: const Text("Profile"),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            onTap: () {},
+            leading: const Icon(Icons.newspaper),
+            title: const Text("News"),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            onTap: () {},
+            leading: const Icon(Icons.settings),
+            title: const Text("Setting"),
+          ),
+        ),
+        Card(
+          child: ListTile(
+            onTap: () {},
+            tileColor: Colors.red,
+            textColor: Colors.white,
+            iconColor: Colors.white,
+            leading: const Icon(Icons.logout),
+            title: const Text("Logout"),
+          ),
+        ),
+      ],
     );
   }
 }
-
-
