@@ -46,4 +46,3 @@ List<News> hotNews = [
     image: "https://cdn.myanimelist.net/images/anime/1847/134795.jpg",
   ),
 ];
-
