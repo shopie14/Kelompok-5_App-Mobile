@@ -12,6 +12,7 @@ class AppRoutes {
   static const String home = 'home';
   static const String newDetail = 'news-detail';
   static const String profile = 'profile';
+  static const String ProfileDetail = 'profile-detail';
 
   static Page _splashScreenRouteBuilder(
     BuildContext context,
@@ -21,7 +22,24 @@ class AppRoutes {
       key: state.pageKey,
       child: const SplashScreen(),
     );
-  } //david
+  }
+
+  static Page _profileScreenBuilder(
+    BuildContext context,
+    GoRouterState state,
+  ) {
+    late User user;
+    if (state.extra != null && state.extra is User) {
+      user = state.extra as User;
+    } else {
+      user = User.dummy();
+    }
+    return MaterialPage(
+      child: ProfileDetail(
+        user: user,
+      ),
+    );
+  }
 
   static Page _homeScreenRouteBuilder(
     BuildContext context,
@@ -87,6 +105,11 @@ class AppRoutes {
         name: newDetail,
         path: "/news-detail/:id",
         pageBuilder: _newDetailRouteBuilder,
+      ),
+      GoRoute(
+        name: ProfileDetail,
+        path: "profile-detail",
+        pageBuilder: _profileScreenBuilder,
       ),
     ],
     initialLocation: "/splash",
