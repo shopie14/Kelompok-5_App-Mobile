@@ -41,7 +41,7 @@ class _ProfilScreenState extends State<ProfileScreen> {
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          title: const Text("Profile screen"),
+          title: const Text("Profile Screen"),
         ),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -71,7 +71,7 @@ class _ProfilScreenState extends State<ProfileScreen> {
                                     controller: _nameCtrl,
                                     validator: (value) {
                                       if (value!.isEmpty) {
-                                        return 'silahkan isi nama lengkap';
+                                        return 'Silahkan isi nama lengkap';
                                       }
                                       return null;
                                     },
@@ -104,7 +104,7 @@ class _ProfilScreenState extends State<ProfileScreen> {
                               controller: _usernameCtrl,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return 'isi username';
+                                  return 'Isi username';
                                 } else if (value.length > 8 ||
                                     value.length < 3) {
                                   return "min. 3-8 huruf";
@@ -123,7 +123,7 @@ class _ProfilScreenState extends State<ProfileScreen> {
                               controller: _emailCtrl,
                               validator: (value) {
                                 if (value!.isEmpty) {
-                                  return 'silahkan isi email';
+                                  return 'Silahkan isi email';
                                 }
                                 return null;
                               },
@@ -145,10 +145,10 @@ class _ProfilScreenState extends State<ProfileScreen> {
                   if (_globalKey.currentState!.validate()) {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                         backgroundColor: Colors.green,
-                        content: Text("Profile Berhasil di simpan!")));
+                        content: Text("Profile berhasil di simpan!")));
                   }
                 },
-                child: const Text('simpan perubahan'),
+                child: const Text('Simpan Perubahan'),
               ),
             ),
             const SizedBox(
