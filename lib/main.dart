@@ -14,7 +14,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
-        colorSchemeSeed: Colors.white,
+        colorSchemeSeed: Colors.blueGrey,
       ),
       title: "Apps Pertemuan 5",
       routeInformationProvider: AppRoutes.goRouter.routeInformationProvider,
